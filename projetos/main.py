@@ -1,4 +1,20 @@
+'''from cProfile import label
+from cgitb import text
 from tkinter import *
+def adiçao():
+    num1 = int(input("Digite o primeiro número: "))
+    num2 = int(input("Digite o segundo número: "))
+    addition = num1 + num2
+    print("A soma de %f + %f é igual a %i " % (num1, num2, addition))
+janela=Tk()
+janela.title("calculadora")
+texto0 = Label(janela,text="***Calculadora***")
+texto0.grid(column=0,row=0)
+texto2 = Label(janela,text="Digite o número de escolha:")
+texto2.grid(column=0,row=2)
+botao = Button(janela,text="1-Adição",command=adiçao())
+botao.grid(column=1,row=)
+janela.mainloop'''
 def loop():
     print("\n")
     print("***Calculadora*** \n")
@@ -68,7 +84,3 @@ def finalizar():
 
 loop()
 finalizar()
-janela=Tk
-
-
-janela.mainloop
