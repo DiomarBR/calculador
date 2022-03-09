@@ -1,4 +1,4 @@
-
+from tkinter import *
 def loop():
     print("\n")
     print("***Calculadora*** \n")
@@ -6,7 +6,8 @@ def loop():
     print(" 1-Adição \n"
           " 2-Subtração \n"
           " 3-Divisão \n"
-          " 4-Multiplicação")
+          " 4-Multiplicação\n"
+          " 5-porcentagem")
 
     entry = float(input("Digite o número de escolha: "))
     match entry:
@@ -36,7 +37,20 @@ def loop():
             multiplication = num1 * num2;
             print("A soma de %f + %f é igual a %f " % (num1, num2, multiplication))
         case 5:
-            print('ola mundo ')
+            print(' ===========\n 1=diminuir \n 2=aumentar \n ===========')
+            entrada = int(input('Digite qual operação você Quer usar:'))
+            if entrada == 1:
+                n1 = float(input('Digite o valor:'))
+                n2 = float(input('Digite a porcentagem:'))
+                percentual = n2 / 100.0  #
+                valor_final = n1 - (percentual * n1)
+                print('O valor final e :{:.2f}'.format(valor_final))
+            else:
+                n1 = float(input('Digite o valor:'))
+                n2 = float(input('Digite a porcentagem:'))
+                porcentagem = n2 / 100.0
+                valor_final = n1 + (porcentagem*n1)
+                print('O valor final e:{:.2f}'.format(valor_final))
 
 
 
@@ -54,3 +68,7 @@ def finalizar():
 
 loop()
 finalizar()
+janela=Tk
+
+
+janela.mainloop

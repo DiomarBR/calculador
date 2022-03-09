@@ -2,8 +2,15 @@ print("==================")
 print("calculadora basica")
 print("==================")
 print(
-    "temos as operaçoes: \n ================= \n 1=Multiplicação \n 2=Divisão \n 3=Subitração \n 4=Adição \n 5=porcentagem  \n ================="
-)
+    'temos as operaçoes:' 
+    '\n ================= '
+    '\n 1=Multiplicação '
+    '\n 2=Divisão '
+    '\n 3=Subitração '
+    '\n 4=Adição '
+    '\n 5=porcentagem  '
+    '\n =================')
+
 entrada = int(input("Digite qual opção vc quer usar:"))
 
 if entrada == 1:
