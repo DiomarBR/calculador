@@ -1,6 +1,3 @@
-from cProfile import label
-from cgitb import text
-from tkinter import *
 def loop():
     print("\n")
     print("***Calculadora*** \n")
@@ -14,19 +11,19 @@ def loop():
     entry = float(input("Digite o número de escolha: "))
     match entry:
         case 1:
-            num1 = int(input("Digite o primeiro número: "))
-            num2 = int(input("Digite o segundo número: "))
+            num1 = float(input("Digite o primeiro número: "))
+            num2 = float(input("Digite o segundo número: "))
             addition = num1 + num2;
             print("A soma de %f + %f é igual a %i " % (num1, num2, addition))
         case 2:
-            num1 = int(input("Digite o primeiro número: "))
-            num2 = int(input("Digite o segundo número: "))
+            num1 = float(input("Digite o primeiro número: "))
+            num2 = float(input("Digite o segundo número: "))
             subtraction = num1 - num2;
             print("A subtração de %f - %f é igual a %i " % (num1, num2, subtraction))
 
         case 3:
-            num1 = int(input("Digite o primeiro número: "))
-            num2 = int(input("Digite o segundo número: "))
+            num1 = float(input("Digite o primeiro número: "))
+            num2 = float(input("Digite o segundo número: "))
             if (num2 == 0):
                 print("A divisão não pode ser executada, nenhum número pode ser dividido por 0.")
                 loop();
@@ -34,8 +31,8 @@ def loop():
                 division = num1 / num2;
                 print("A divisão de %f e %f é igual a %f " % (num1, num2, division))
         case 4:
-            num1 = int(input("Digite o primeiro número: "))
-            num2 = int(input("Digite o segundo número: "))
+            num1 = float(input("Digite o primeiro número: "))
+            num2 = float(input("Digite o segundo número: "))
             multiplication = num1 * num2;
             print("A soma de %f + %f é igual a %f " % (num1, num2, multiplication))
         case 5:
@@ -66,13 +63,5 @@ def finalizar():
         case 2:
             loop();
             finalizar()
-
-
-janela=Tk()
-janela.title("calculadora")
-texto0 = Label(janela,text="***Calculadora***")
-texto0.grid(column=0,row=0)
-texto2 = Label(janela,text="Digite o número de escolha:")
-texto2.grid(column=0,row=2)
-botao = Button(janela,text="1-Adição",command=loop)
-botao.grid(column=1,row=4)
+loop()
+finalizar()
